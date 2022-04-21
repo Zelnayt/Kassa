@@ -1,57 +1,53 @@
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 
 public class KassaGuiHandler
 {
-	private final Label bedragLabel, subtotaalLabel;
-	private final TextField bedragVak, subtotaalVak;
+    private final Button exitKnop, knop1,knop2,knop3,knop4,knop5,knop6,knop7,knop8,knop9;
 
-	public KassaGuiHandler(GridPane pane)
-	{
-		pane.setPadding(new Insets(10, 10, 10, 10));
-		pane.setVgap(5);
-		pane.setHgap(5);
-		pane.setAlignment(Pos.CENTER);
-
-		// Maak de labels
-		bedragLabel = new Label("Voer bedrag in");
-		subtotaalLabel = new Label("Subtotaal");
-
-		// Maak de tekstvakken
-		bedragVak = new TextField();
-		bedragVak.setAlignment(Pos.CENTER_RIGHT);
-
-		subtotaalVak = new TextField();
-
-		// Zorg dat gebruiker niet kan wijzigen en lijn rechts uit
-		subtotaalVak.setEditable(false);
-		subtotaalVak.setAlignment(Pos.CENTER_RIGHT);
-
-		// Event-handling
-		bedragVak.setOnAction(event -> subtotaalBerekening());
-
-		// Voeg de componenten toe aan het GridPane
-		pane.add(bedragLabel, 0, 0);
-		pane.add(bedragVak, 0, 1);
-		pane.add(subtotaalLabel, 1, 0);
-		pane.add(subtotaalVak, 1, 1);
-	}
-
-	private void subtotaalBerekening()
-	{
-		String invoer = bedragVak.getText();
-		double invoerBedrag = Double.parseDouble(invoer);
-
-		// even voor de test
-		double st = invoerBedrag;
-
-		subtotaalVak.setText(String.format("%.2f", st));
-
-		// Maak invoervak leeg
-		bedragVak.setText("");
-	}
+    public KassaGuiHandler(GridPane pane)
+    {
+        exitKnop = new Button("Exit");
+        exitKnop.setOnAction(event -> System.exit(0));
+        exitKnop.setMinSize(150, 50);
+        pane.add(exitKnop, 1, 3);
+        
+        knop1 = new Button("knop");
+        knop1.setMinSize(150, 100);
+        pane.add(knop1, 0, 0);
+        
+        knop2 = new Button("knop");
+        knop2.setMinSize(150, 100);
+        pane.add(knop2, 1, 0);
+        
+        knop3 = new Button("knop");
+        knop3.setMinSize(150, 100);
+        pane.add(knop3, 2, 0);
+        
+        knop4 = new Button("knop");
+        knop4.setMinSize(150, 100);
+        pane.add(knop4, 0, 1);
+        
+        knop5 = new Button("knop");
+        knop5.setMinHeight(80);
+        knop5.setMinSize(150, 100);
+        pane.add(knop5, 1, 1);
+        
+        knop6 = new Button("knop");
+        knop6.setMinSize(150, 100);
+        pane.add(knop6, 2, 1);
+        
+        knop7 = new Button("knop");
+        knop7.setMinSize(150, 100);
+        pane.add(knop7, 0, 2);
+        
+        knop8 = new Button("knop");
+        knop8.setMinSize(150, 100);
+        pane.add(knop8, 1, 2);
+        
+        knop9 = new Button("knop");
+        knop9.setMinSize(150, 100);
+        pane.add(knop9, 2, 2);
+    }
 
 }

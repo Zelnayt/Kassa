@@ -12,7 +12,8 @@ public class JavaFXApp extends Application {
         new KassaGuiHandler(root);
         
         primaryStage.setScene(scene);
-        primaryStage.setTitle("titel");
+        primaryStage.setTitle("Kassa");
+        primaryStage.setFullScreen(true);
         primaryStage.show();
     }
 
