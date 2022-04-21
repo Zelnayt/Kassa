@@ -9,7 +9,7 @@ public class JavaFXApp extends Application {
         GridPane root = new GridPane();
         Scene scene = new Scene(root);
         
-        new KassaGui(root);
+        new KassaGuiHandler(root);
         
         primaryStage.setScene(scene);
         primaryStage.setTitle("titel");

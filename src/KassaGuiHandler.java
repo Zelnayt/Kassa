@@ -4,12 +4,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
-public class KassaGui
+public class KassaGuiHandler
 {
 	private final Label bedragLabel, subtotaalLabel;
 	private final TextField bedragVak, subtotaalVak;
 
-	public KassaGui(GridPane pane)
+	public KassaGuiHandler(GridPane pane)
 	{
 		pane.setPadding(new Insets(10, 10, 10, 10));
 		pane.setVgap(5);
